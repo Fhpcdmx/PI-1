@@ -25,7 +25,16 @@ def home():
     Ruta raíz de la API.
     Retorna un mensaje de bienvenida en formato JSON.
     """
-    return {"message": "API de Recomendación de Películas"}
+return {"message": "API de Recomendación de Películas "
+           "endpoints: "
+           "Cuentas con las siguientes funciones: "
+           "/cantidad_filmaciones_mes/<Mes> ejemplo:https://pi-1-wyls.onrender.com/cantidad_filmaciones_mes/Enero "
+           "/cantidad_filmaciones_dia/<Mes> ejemplo:https://pi-1-wyls.onrender.com/cantidad_filmaciones_mes/Lunes "
+           "/score_titulo/<Titulo de la pelicula> ejemplo:https://pi-1-wyls.onrender.com/score_titulo/Toy story "
+           "/votos_titulo/<Titulo de la pelicula> ejemplo:https://pi-1-wyls.onrender.com/votos_titulo/Toy story "
+           "/get_actor/<Nombre del actor> ejemplo:https://pi-1-wyls.onrender.com/get_actor/Tom hanks "
+           "/get_director/<Nombre del director> ejemplo:https://pi-1-wyls.onrender.com/get_director/John Lasseter "
+           "/recomendacion/<Titulo de la pelicula> ejemplo:https://pi-1-wyls.onrender.com/recomendacion/Babe "}
 
 @app.get('/cantidad_filmaciones_mes/{mes}')
 def cantidad_filmaciones_mes(mes: str):
